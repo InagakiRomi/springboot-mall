@@ -2,12 +2,13 @@ package com.inagakiromi.springooot_mall.service;
 
 import java.util.List;
 
+import com.inagakiromi.springooot_mall.constant.ProductCategory;
 import com.inagakiromi.springooot_mall.dto.ProductRequest;
 import com.inagakiromi.springooot_mall.model.Product;
 
 public interface ProductService {
         
-        List<Product> getProducts();
+        List<Product> getProducts(ProductCategory category,String search);
         
         Product getProductById(Integer productId);
 
