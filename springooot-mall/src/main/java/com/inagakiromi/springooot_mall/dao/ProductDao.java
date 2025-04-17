@@ -2,13 +2,13 @@ package com.inagakiromi.springooot_mall.dao;
 
 import java.util.List;
 
-import com.inagakiromi.springooot_mall.constant.ProductCategory;
+import com.inagakiromi.springooot_mall.dto.ProductQueryParams;
 import com.inagakiromi.springooot_mall.dto.ProductRequest;
 import com.inagakiromi.springooot_mall.model.Product;
 
 public interface ProductDao {
     
-    List<Product> getProducts(ProductCategory category,String search);
+    List<Product> getProducts(ProductQueryParams productQueryParams);
 
     Product getProductById(Integer productId);
 
