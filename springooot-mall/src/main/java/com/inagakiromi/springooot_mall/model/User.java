@@ -3,7 +3,6 @@ package com.inagakiromi.springooot_mall.model;
 import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class User {
     private Integer userId;
