@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.inagakiromi.springooot_mall.dto.UserRegisterRequest;
+import com.inagakiromi.springooot_mall.dto.UserLoginRequest; 
 import com.inagakiromi.springooot_mall.model.User;
 import com.inagakiromi.springooot_mall.service.UserService;
 
@@ -26,5 +27,12 @@ public class UserController {
         User user = userService.getUserById(userId);
 
         return ResponseEntity.status(HttpStatus.CREATED).body(user);
+    }
+
+    @PostMapping("/users/login")
+    public ResponseEntity<User> login(@RequestBody @Valid UserLoginRequest userLoginRequest){
+        User user = userService.login(userLoginRequest);
+
+        return ResponseEntity.status(HttpStatus.OK).body(user);
     }
 }
