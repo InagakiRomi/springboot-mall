@@ -11,6 +11,7 @@ import com.inagakiromi.springooot_mall.dao.OrderDao;
 import com.inagakiromi.springooot_mall.dao.ProductDao;
 import com.inagakiromi.springooot_mall.dto.BuyItem;
 import com.inagakiromi.springooot_mall.dto.CreateOrderRequest;
+import com.inagakiromi.springooot_mall.model.Order;
 import com.inagakiromi.springooot_mall.model.OrderItem;
 import com.inagakiromi.springooot_mall.model.Product;
 import com.inagakiromi.springooot_mall.service.OrderService;
@@ -23,6 +24,17 @@ public class OrderServiceImpl implements OrderService{
 
     @Autowired
     private ProductDao productDao;
+
+    @Override
+    public Order getOrderById(Integer orderId) {
+        Order order = orderDao.getOrderById(orderId);
+
+        List<OrderItem> orderItemList = orderDao.getOrderItemsByOrderId(orderId);
+
+        order.setOrderItemList(orderItemList);
+
+        return order;
+    }
 
     @Transactional
     @Override
