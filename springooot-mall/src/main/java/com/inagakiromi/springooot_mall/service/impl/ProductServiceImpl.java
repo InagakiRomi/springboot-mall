@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.inagakiromi.springooot_mall.constant.ProductCategory;
 import com.inagakiromi.springooot_mall.dto.ProductQueryParams;
 import com.inagakiromi.springooot_mall.dao.ProductDao;
 import com.inagakiromi.springooot_mall.dto.ProductRequest;
