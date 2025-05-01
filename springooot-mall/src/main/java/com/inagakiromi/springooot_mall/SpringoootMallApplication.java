@@ -8,6 +8,7 @@ public class SpringoootMallApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringoootMallApplication.class, args);
+		//TTTTT
 	}
 
 }
